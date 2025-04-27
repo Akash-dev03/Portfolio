@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: portfolio-backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false # Will be set manually in Render dashboard
+      - key: PORT
+        value: 8080 

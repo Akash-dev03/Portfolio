@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  passcode  String   @unique
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  imageUrl    String?
+  liveUrl     String?
+  githubUrl   String?
+  technologies String[]
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  read      Boolean  @default(false)
+  replies   Reply[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Reply {
+  id        Int      @id @default(autoincrement())
+  message   String
+  contact   Contact  @relation(fields: [contactId], references: [id], onDelete: Cascade)
+  contactId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Settings {
+  id            Int      @id @default(autoincrement())
+  aboutText     String
+  resumeUrl     String?
+  githubUrl     String?
+  linkedinUrl   String?
+  twitterUrl    String?
+  emailAddress  String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model HeroSection {
+  id        Int      @id @default(autoincrement())
+  name      String
+  roles     String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AboutSection {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id          Int      @id @default(autoincrement())
+  name        String
+  category    String
+  devicon     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Education {
+  id            Int      @id @default(autoincrement())
+  institution   String
+  degree        String
+  field         String
+  startDate     DateTime
+  endDate       DateTime?
+  grade         String?
+  achievements  String[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

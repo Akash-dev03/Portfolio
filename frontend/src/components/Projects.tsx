@@ -5,7 +5,7 @@ import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://portfolio-bfnh.onrender.com/api';
 
 interface Project {
   id: number;

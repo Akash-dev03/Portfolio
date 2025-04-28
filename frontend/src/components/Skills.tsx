@@ -3,7 +3,7 @@ import { SkillCategory } from '../data/skills';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://portfolio-bfnh.onrender.com/api';
 
 interface Skill {
   id: number;

@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from './AdminLayout';
 import { toast } from '@/hooks/use-toast';
-import axios from 'axios';
-
-// const API_URL = 'http://localhost:5000/api';
-const API_URL = 'https://portfolio-bfnh.onrender.com/api';
-
+import api from "@/services/api";
 
 const Settings = () => {
   const [adminPasscode, setAdminPasscode] = useState('');
@@ -37,14 +33,9 @@ const Settings = () => {
     
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.put(
-        `${API_URL}/settings/change-passcode`,
-        { newPasscode: adminPasscode },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        }
+      await api.put(
+        '/settings/change-passcode',
+        { newPasscode: adminPasscode }
       );
 
       toast({

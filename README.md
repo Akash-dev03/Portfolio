@@ -1,62 +1,96 @@
-# Portfolio Project Deployment Guide
+# Akash's Portfolio
 
-This project is deployed across three platforms:
+Welcome to my personal portfolio website!  
+I'm **Akash**, a Computer Science Engineer showcasing my projects, skills, and experience.
 
-## 🌐 Frontend (Vercel)
+### 🚀 Live Website
+👉 [Visit Portfolio](https://portfolio-akashs-projects-2b49a841.vercel.app/)
 
-1. Push your code to GitHub
-2. Go to [Vercel](https://vercel.com)
-3. Import your GitHub repository
-4. Select the `frontend` directory as the root directory
-5. Configure build settings:
-   - Framework Preset: Vite
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-6. Add environment variables:
-   - `VITE_API_URL`: Your Render backend URL
+---
 
-## ⚙️ Backend (Render)
+## 🛠 Tech Stack
 
-1. Go to [Render](https://render.com)
-2. Create a new Web Service
-3. Connect your GitHub repository
-4. Configure:
-   - Name: `portfolio-backend`
-   - Root Directory: `backend`
-   - Environment: `Node`
-   - Build Command: `npm install && npm run build`
-   - Start Command: `npm start`
-5. Add environment variables:
-   - `DATABASE_URL`: Your Supabase PostgreSQL connection string
-   - `NODE_ENV`: `production`
-   - Add any other environment variables from your .env file
+**Frontend**  
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/) + [TypeScript](https://www.typescriptlang.org/)
 
-## 🗄️ Database (Supabase)
+**Backend**  
+- [Node.js](https://nodejs.org/) + [PostgreSQL](https://www.postgresql.org/)
 
-1. Go to [Supabase](https://supabase.com)
-2. Create a new project
-3. Get your PostgreSQL connection string from Settings > Database
-4. Update your `DATABASE_URL` in Render with this connection string
-5. Run migrations:
-   ```bash
-   cd backend
-   npx prisma migrate deploy
-   ```
+**Hosting**  
+- Frontend: [Vercel](https://vercel.com/)  
+- Backend: [Render](https://render.com/)  
+- Database: [Neon](https://neon.tech/)
 
-## 🔄 Keeping the Backend Alive
+---
 
-To prevent the free Render instance from sleeping:
-1. Set up a cron job or use a service like UptimeRobot
-2. Ping your backend URL every 5-10 minutes
+## 📂 Project Structure
 
-## 🔗 Connecting Everything
+```
+Portfolio/
+├── frontend/  (React + Vite + TypeScript)
+├── backend/   (Node.js server)
+└── README.md
+```
 
-1. After deploying the backend to Render, get the URL (e.g., `https://your-app.onrender.com`)
-2. Add this URL as `VITE_API_URL` in your Vercel frontend environment variables
-3. Update CORS settings in your backend if necessary
+---
 
-## 📝 Post-Deployment
+## 🧹 Features
 
-1. Test the complete flow from frontend to backend to database
-2. Monitor the logs in both Vercel and Render
-3. Set up any necessary monitoring or alerting 
+- Dynamic project listing
+- Filter projects by technologies
+- Responsive and modern UI
+- Fully TypeScript typed codebase
+- Optimized backend API with PostgreSQL integration
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Akash-dev03/Portfolio.git
+cd Portfolio
+```
+
+### 2. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 3. Backend Setup
+```bash
+cd backend
+npm install
+npm run start
+```
+
+> Make sure to configure your database connection in the backend (`.env` file).
+
+---
+
+## 📷 Screenshots
+
+> (You can add screenshots of your live website here if you want.)
+
+---
+
+## 📬 Contact
+
+- **GitHub:** [@Akash-dev03](https://github.com/Akash-dev03)
+- **LinkedIn:** (Add your LinkedIn link if you want)
+
+---
+
+## 📝 License
+
+This project is licensed for personal use and showcases.
+
+---
+
+### ✨
+If you like it, feel free to star ⭐ the repo!
+
+---
+

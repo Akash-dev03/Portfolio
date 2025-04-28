@@ -6,23 +6,23 @@ import { motion } from 'framer-motion';
 // Internship data
 const internships = [
   {
-    company: 'TechVerse Solutions',
-    role: 'Full Stack Intern',
-    duration: 'Jun 2024 - Sep 2024',
-    description: 'Worked on building internal tooling dashboards using React, Node.js, and MongoDB. Improved performance and user experience with real-time charts.'
+    company: 'Kennametal',
+    role: 'Project Intern',
+    duration: 'Mar 2024 - Aug 2024',
+    description: 'Automated Adobe Illustrator scripting with AI integration, reducing design time by 40%. Enhanced design workflow precision and utilized Python and ExtendScript frameworks.'
   },
   {
-    company: 'CloudHive Networks',
-    role: 'AI/ML Intern',
-    duration: 'Dec 2023 - Feb 2024',
-    description: 'Developed data pipelines and implemented ML models for anomaly detection using Python and FastAPI. Collaborated on RESTful API services.'
+    company: 'Gully Sales',
+    role: 'Intern',
+    duration: 'Feb 2025 - May 2025',
+    description: 'Worked on multiple projects from scratch, including gathering requirements, designing system architecture, and building scalable web solutions to meet business needs.'
   },
   {
-    company: 'CyberCore Labs',
-    role: 'Cybersecurity Intern',
-    duration: 'May 2023 - Jul 2023',
-    description: 'Assisted in penetration testing and automated vulnerability scans. Contributed to documentation and internal security workshops.'
-  }
+    company: 'GenEd Technologies',
+    role: 'Project Intern',
+    duration: 'Oct 2022 - Dec 2022',
+    description: 'Built drone and robotics systems from scratch, improving prototype reliability by 25%. Worked with Arduino, ROS, and Python for automation and control.'
+  },
 ];
 
 // Extracted InternshipCard component

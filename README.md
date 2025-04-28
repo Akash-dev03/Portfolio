@@ -70,16 +70,9 @@ npm run start
 
 ---
 
-## 📷 Screenshots
-
-> (You can add screenshots of your live website here if you want.)
-
----
-
 ## 📬 Contact
 
 - **GitHub:** [@Akash-dev03](https://github.com/Akash-dev03)
-- **LinkedIn:** (Add your LinkedIn link if you want)
 
 ---
 

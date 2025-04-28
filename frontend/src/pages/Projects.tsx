@@ -47,23 +47,37 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     if (projects.length > 0) {
-      // Extract unique technologies
-      const techs = new Set<string>();
-      projects.forEach(project => {
-        project.technologies.forEach(tech => techs.add(tech));
+      // Extract and normalize unique technologies
+      const techMap = new Map<string, string>();
+  
+      projects.forEach((project) => {
+        project.technologies.forEach((tech) => {
+          const normalized = tech.toLowerCase();
+          if (!techMap.has(normalized)) {
+            techMap.set(normalized, tech); // keep first encountered original-cased version
+          }
+        });
       });
-      setUniqueTechnologies(Array.from(techs).sort());
-
-      // Filter projects by technology only
+  
+      const uniqueTechs = Array.from(techMap.values()).sort((a, b) =>
+        a.localeCompare(b)
+      );
+  
+      setUniqueTechnologies(uniqueTechs);
+  
+      // Now filter projects
       let filtered = projects;
       if (selectedTech !== 'all') {
-        filtered = filtered.filter(project =>
-          project.technologies.some(t => t.toLowerCase() === selectedTech.toLowerCase())
+        filtered = filtered.filter((project) =>
+          project.technologies.some(
+            (t) => t.toLowerCase() === selectedTech.toLowerCase()
+          )
         );
       }
       setFilteredProjects(filtered);
     }
   }, [projects, selectedTech]);
+  
 
   const fetchProjects = async () => {
     try {

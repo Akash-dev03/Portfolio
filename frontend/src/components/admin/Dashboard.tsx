@@ -14,7 +14,9 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 import { contactApi } from '@/services/api';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+// const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://portfolio-bfnh.onrender.com/api';
+
 
 interface Contact {
   id: number;

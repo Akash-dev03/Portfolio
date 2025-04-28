@@ -10,7 +10,9 @@ import { Button } from '@/components/ui/button';
 import { Edit, Trash, Plus, Filter, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-const API_URL = 'http://localhost:5000/api';
+// const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://portfolio-bfnh.onrender.com/api';
+
 
 interface Skill {
   id: number;

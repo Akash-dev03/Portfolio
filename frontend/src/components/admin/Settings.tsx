@@ -3,7 +3,9 @@ import AdminLayout from './AdminLayout';
 import { toast } from '@/hooks/use-toast';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+// const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://portfolio-bfnh.onrender.com/api';
+
 
 const Settings = () => {
   const [adminPasscode, setAdminPasscode] = useState('');

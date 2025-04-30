@@ -12,7 +12,7 @@ const Footer = () => {
                 Akash
               </span>
             </h2>
-            <p className="text-gray-400 text-sm mt-1">Computer Science and Engineering Student</p>
+            <p className="text-gray-400 text-sm mt-1">Information Science and Engineering Student</p>
           </div>
           
           <div className="flex space-x-6">

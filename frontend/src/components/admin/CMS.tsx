@@ -702,6 +702,14 @@ const ProjectsForm = () => {
                   className="w-full bg-dark/50 border border-gray-700 rounded-lg p-2 text-white"
                   placeholder="https://example.com/image.jpg"
                 />
+                <a 
+                  href="https://img.vdoerig.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-glow hover:underline"
+                >
+                  Can get link by uploading at imgur
+                </a>
               </div>
               
               <div className="md:col-span-2 space-y-2">

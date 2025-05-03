@@ -158,7 +158,7 @@ const Contact = () => {
               </div>
 
               <a
-                href="/resume.pdf"
+                href="/akash_resume.pdf"
                 download="akash_resume.pdf"
                 className="mt-10 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-glow to-glow-secondary text-white font-medium hover:shadow-lg hover:shadow-glow/30 transition-all transform hover:-translate-y-1 text-center justify-center"
               >
